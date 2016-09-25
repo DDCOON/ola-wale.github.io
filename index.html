@@ -1,33 +1,176 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link href="https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i" rel="stylesheet">
-		<script src="js/typewrite.min.js"></script>
-		<style>
-			body{
-				font-family: 'Space Mono', monospace;
-			}
-			header h3{
-				font-weight: 100;
-				font-size: 27px;
-    		font-weight: 100;
-			}
-			header{
-				    padding: 85px 50px;
-			}
-			header h6{
-				font-size: 15px;
-font-weight: 100;
-			}
-		</style>
-	</head>
-	<body>
-		<header>
-			<h3 class="typewrite">typewrite.js</h3>
-			<h6>Typewritejs is a tiny library for revealing text in a typewriter styled manner.</h6>
-		</header>
-		<script>
-		new typeWrite(".typewrite",{'texts':['This','is','typewrite.js'],'loop':true,'reverseDelay':1000}).start();
-		</script>
-	</body>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i" rel="stylesheet">
+	<script src="js/typewrite.min.js"></script>
+	<script src="https://use.fontawesome.com/3dfeeebff6.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.6.0/styles/agate.min.css">
+	<script src="https://cdn.jsdelivr.net/highlight.js/9.6.0/highlight.min.js"></script>
+	<style>
+		body,
+		code {
+			font-family: 'Space Mono', monospace;
+		}
+
+		header h3 {
+			font-weight: 100;
+			font-size: 27px;
+			font-weight: 100;
+		}
+
+		header,
+		.use {
+			padding: 85px 50px;
+		}
+
+		h6 {
+			font-size: 15px;
+			font-weight: 100;
+		}
+
+		a.button {
+			padding: 9px;
+			border-radius: 5px;
+			color: black;
+			border: 1px solid black;
+			transition: .2s ease-out;
+			margin-right: 21px;
+			text-decoration: none;
+		}
+
+		a.button:hover {
+			color: white;
+			background-color: black;
+		}
+
+		code {
+			word-wrap: break-word;
+			display: block;
+			background-color: black;
+			margin-right: -8px;
+			margin-left: -8px;
+			color: white;
+			padding: 63px 55px !important;
+		}
+
+		mark {
+			background-color: rgba(255, 0, 0, 0.44);
+		}
+
+		.tjs {
+			background-color: gainsboro;
+			padding: 20px;
+			border-radius: 3px;
+			font-weight: 100;
+			font-size: 15px;
+			display: block;
+			margin-bottom: 31px;
+		}
+	</style>
+	<title>typewrite.js</title>
+</head>
+
+<body>
+	<header>
+		<h3 class="typewrite">typewrite.js</h3>
+		<h6>Typewritejs is a tiny library for revealing text in a typewriter styled manner.</h6>
+		<a class="button" href="https://github.com/ola-wale/typewrite.js"><i class="fa fa-github-alt" aria-hidden="true"></i> Source</a>
+		<a class="button" href="https://raw.githubusercontent.com/ola-wale/typewrite.js/master/dist/js/typewrite.min.js"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</a>
+	</header>
+	<code class="javascript">
+			// Instantiate typewrite on any element(s). <br />
+			let x = new typeWrite(".someselector");
+		</code>
+	<div class="use">
+		<section>
+			<h3>Installation</h3>
+			<h6>To use typewrite,download the latest release and include it in your markup.</h6>
+		</section>
+		<section>
+			<h3>Basic Usage</h3>
+			<h6>With typewrite installed, getting started is as simple as calling typewrite() with some DOM elements. Those elements should form of a CSS selector because typewrite uses <mark>.querySelector()</mark></h6>
+			<h6>With typewrite instantiated you can start your instance with the start() method or reverse it with the .reverse() method.</h6>
+		</section>
+	</div>
+	<code class="javascript">
+			// Start typewrite on any element(s). <br />
+			x.start(); <br />
+			// reverse the current text <br />
+			//the reverse method accepts a function and calls it after the reverse is done. <br />
+			var callback  = function(){ <br />
+			  	console.log('reverse done :)'); <br />
+			} <br />
+			x.reverse(callback);
+		</code>
+	<div class="use">
+		<section>
+			<h3>Options</h3>
+			<h6>An options object can be passed to typewrite when instantiated.</h6>
+		</section>
+	</div>
+	<code class="js">
+			let x = new typeWrite(".someselector",{ <br />
+				speed: 500, //speed in milliseconds, default : 100ms <br />
+				separator: ' ', //character or string to enter between characters, default: ' ' <br />
+				texts: ['hey', 'what\'s popping ?'], //an array of texts, default : the current text of the element <br />
+				loop: true, //keep going on and on, default: false <br />
+				reverseDelay: 500, //milliseconds to wait before reversing when cycling through texts, default : the initial speed <br />
+				cursor: '|', //the cursor (duh), default: the Pipe "|" character
+			<br />});
+		</code>
+	<div class="use">
+		<section id="demo">
+			<h3>Demo</h3>
+			<span class="code"><h2 class="tjs">Hey</h2></span>
+			<a class="button start">Start</a>
+			<a class="button reverse">Reverse</a>
+		</section>
+	</div>
+	<div class="use">
+		<section id="events">
+			<h2>Events</h2>
+			<h3>typeDone</h3>
+			<h6>Fires after a piece text has been written completely.</h6>
+		</section>
+	</div>
+	<code class="js">
+			document.getElementById("selector").addEventListener("typeDone", function(){ <br />
+    		alert('typeDone') <br />
+			}); <br />
+		</code>
+	<div class="use">
+		<section>
+			<h3>reverse</h3>
+			<h6>Fires after a piece text has been reversed.</h6>
+		</section>
+	</div>
+	<code class="js">
+			document.getElementById("selector").addEventListener("reverse", function(){ <br />
+				alert('this text has been reversed') <br />
+			}); <br />
+		</code>
+	<script>
+		let x = new typeWrite(".typewrite", {
+			'texts': ['This', 'is', 'typewrite.js'],
+			'loop': true,
+			'reverseDelay': 1000
+		}).start();
+		$('code').each(function(i, block) {
+			hljs.highlightBlock(block);
+		});
+		let test = new typeWrite(".tjs", {
+			'texts': ['no! Jupiter isn\'t ready'],
+			'reverseDelay': 1000
+		});
+		$('.start').click(function(event) {
+			test.start();
+		});
+		$('.reverse').click(function(event) {
+			test.reverse();
+		});
+	</script>
+</body>
+
 </html>
