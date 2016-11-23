@@ -195,7 +195,7 @@
 				z-index: 4;
 				position: relative;
 			}
-			.things span {
+			.things span[data-colors] {
 				width: 80px;
 				height: 80px;
 				border: 3px solid black;
@@ -204,7 +204,7 @@
 				margin-bottom: 20px;
 				text-align: center;
 			}
-			.things span p {
+			.things span span {
 				display: table-cell;
 				vertical-align: middle;
 			}
@@ -245,7 +245,7 @@
 			}
 		</style>
 	</head>
-	<body lang="angielski">
+	<body lang="en">
 		<header>
 			<p id="polski-mode">
 				Polski
@@ -320,40 +320,40 @@
 			</header>
 			<div class="things container">
 				<span data-colors='{"background-color":"#767bb3","border-color":"#000","color":"#000"}'>
-					<p>PHP</p>
+					<span>PHP</span>
 				</span>
 				<span data-colors='{"background-color":"#f16529","border-color":"#e44d26","color":"#fff"}'>
-					<p>HTML5</p>
+					<span>HTML5</span>
 				</span>
 				<span data-colors='{"background-color":"#33a9dc","border-color":"#1572b6","color":"#fff"}'>
-					<p>Css3</p>
+					<span>Css3</span>
 				</span>
 				<span data-colors='{"background-color":"#0868ac","border-color":"#0868ac","color":"#fff"}'>
-					<p>jQuery</p>
+					<span>jQuery</span>
 				</span>
 				<span data-colors='{"background-color":"#242238","border-color":"#4fc7ec","color":"#4fc7ec"}'>
-					<p>Ps</p>
+					<span>Ps</span>
 				</span>
 				<span data-colors='{"background-color":"#3c3228","border-color":"#ffa31b","color":"#ffa31b"}'>
-					<p>Ai</p>
+					<span>Ai</span>
 				</span>
 				<span data-colors='{"background-color":"#f8dc3d","border-color":"#000","color":"#000"}'>
-					<p>Js</p>
+					<span>Js</span>
 				</span>
 				<span data-colors='{"background-color":"#cd679a","border-color":"#cd679a","color":"#fff"}'>
-					<p>Sass</p>
+					<span>Sass</span>
 				</span>
 				<span data-colors='{"background-color":"#61478A","border-color":"#61478A","color":"#fff"}'>
-					<p>Bootstrap</p>
+					<span>Bootstrap</span>
 				</span>
 				<span data-colors='{"background-color":"#c30e2e","border-color":"#dd0330","color":"#fff"}'>
-					<p>Angular</p>
+					<span>Angular</span>
 				</span>
 				<span data-colors='{"background-color":"#f05033","border-color":"#f05033","color":"#fff"}'>
-					<p>Git</p>
+					<span>Git</span>
 				</span>
 				<span data-colors='{"background-color":"gainsboro","border-color":"#f16529","color":"#000"}'>
-					<p>MySql</p>
+					<span>MySql</span>
 				</span>
 			</div>
 		</div>
@@ -412,18 +412,18 @@
 				'cursor': ' |'
 			}).start();
 			$('#polski-mode').click(function(event) {
-				if ($('body').attr('lang') == 'angielski') {
+				if ($('body').attr('lang') == 'en') {
 						$('[data-polski]').each(function(index, el) {
 								$(this).attr('data-angielski', $(this).text());
 								$(this).text($(this).attr('data-polski'));
 						});
 						$('#polski-mode').text('Angielski');
-						$('body').attr('lang', 'polski');
+						$('body').attr('lang', 'pl');
 				} else {
 						$('[data-angielski]').each(function(index, el) {
 								$(this).text($(this).attr('data-angielski'));
 						});
-						$('body').attr('lang', 'angielski');
+						$('body').attr('lang', 'en');
 						$('#polski-mode').text('polski');
 				}
 			});
