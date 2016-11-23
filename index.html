@@ -20,11 +20,7 @@
 				min-height: 100vh;
 				display: table;
 				position: fixed;
-				margin-top: -33px;
 				margin-right: 0;
-				top: 50%;
-				transform: translate(-50%, -50%);
-				left: 50%;
 			}
 			div.intro > div {
 				display: table-cell;
@@ -238,6 +234,14 @@
 				left: 0;
 				top: 0;
 				display: none;
+			}
+			/** mozilla specific**/
+			@-moz-document url-prefix() {
+				div.intro {
+					top: 50%;
+					transform: translate(-50%, -50%);
+					left: 50%;
+				}
 			}
 		</style>
 	</head>
