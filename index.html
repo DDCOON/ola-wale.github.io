@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -15,6 +14,21 @@
 			body {
 				background-color: white;
 				font-family: 'Space Mono', monospace;
+				transition: all 0.3s ease-out;
+			}
+			html body[lang].dark {
+				background-color: black;
+				color: white;
+			}
+			html body[lang].dark * {
+				color: white;
+			}
+			html body[lang].dark .works,
+			html body[lang].dark .tools {
+				background-color: transparent;
+			}
+			html body[lang].dark .things span[data-colors]:not(:hover){
+				border-color: white !important;
 			}
 			div.intro {
 				min-height: 100vh;
@@ -237,6 +251,11 @@
 				right: 0;
 				left: 0;
 				top: 0;
+			}
+			body > header p{
+				display: inline-block;
+			}
+			body > header p:first-child {
 				display: none;
 			}
 			/** mozilla specific**/
@@ -252,7 +271,10 @@
 	<body lang="en">
 		<header>
 			<p id="polski-mode">
-				Polski
+				Polski /
+			</p>
+			<p data-polski="Wlacznik swiatla" id="lights">
+			 Light Switch
 			</p>
 		</header>
 		<div class="container">
@@ -367,6 +389,9 @@
 						$(window).scrollTop(0);
 				}, 1000);
 			})
+			$('#lights').click(function(event) {
+				$('body').toggleClass('dark');
+			});
 			var colorJect;
 			var $this;
 			$('[data-colors]').mouseenter(function(event) {
@@ -397,7 +422,7 @@
 				}).start();
 			});
 			document.querySelector(".intro .type3").addEventListener("typeDone", function() {
-				$('body > header').fadeIn();
+				$('body > header p:first-child').fadeIn().css('display', 'inline-block');
 			})
 			document.querySelector(".intro .type2").addEventListener("typeDone", function() {
 				new typeWrite(".intro .type3", {
@@ -428,7 +453,7 @@
 								$(this).text($(this).attr('data-angielski'));
 						});
 						$('body').attr('lang', 'en');
-						$('#polski-mode').text('polski');
+						$('#polski-mode').text('Polski');
 				}
 			});
 			var opacify = function(){
