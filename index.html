@@ -437,10 +437,6 @@
 						target.css('opacity', scrollPercent);
 				}
 				$(".fix").stick_in_parent();
-				$('.fix a').click(function(event) {
-						event.preventDefault();
-						$('iframe').attr('src', $(this).attr('href'));
-				});
 		}
 			$(document)
 			.scroll(opacify);
