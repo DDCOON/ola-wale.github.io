@@ -1,272 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Malik Moren</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i" rel="stylesheet">
-		<script src="https://cdn.rawgit.com/ola-wale/ola-wale.github.io/master/typewritejs/js/typewrite.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script src="https://cdn.rawgit.com/leafo/sticky-kit/v1.1.2/jquery.sticky-kit.js"></script>
+		<script data-main="scripts/front-main" src="scripts/require.min.js"></script>
+		<link href="css/front-main.css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<style>
-			html,
-			body {
-				background-color: white;
-				font-family: 'Space Mono', monospace;
-				transition: all 0.3s ease-out;
-			}
-			html body[lang].dark {
-				background-color: black;
-				color: white;
-			}
-			html body[lang].dark * {
-				color: white;
-			}
-			html body[lang].dark .works,
-			html body[lang].dark .tools {
-				background-color: transparent;
-			}
-			html body[lang].dark .things span[data-colors]:not(:hover){
-				border-color: white !important;
-			}
-			div.intro {
-				min-height: 100vh;
-				display: table;
-				position: fixed;
-				top: 0;
-    				bottom: 0;
-   				left: 0;
-    				right: 0;
-    				margin: auto;
-			}
-			div.intro > div {
-				display: table-cell;
-				vertical-align: middle;
-			}
-			div.intro p {
-				font-size: 1em;
-				line-height: 1.45;
-				color: #000000;
-				font-weight: 100;
-			}
-			@media (max-width: 767px) {
-				div.intro p {
-						font-size: 1.0em;
-						line-height: 1.35;
-				}
-			}
-			a svg {
-				vertical-align: middle;
-			}
-			a.wale-btn span svg {
-				fill: white;
-			}
-			a.wale-btn {
-				display: block;
-				margin-bottom: 26px;
-			}
-			a.wale-btn span {
-				background-color: black;
-				color: white;
-				padding: 10px;
-				border-radius: 19px;
-				box-shadow: 0px 1px 3px 1px rgba(61, 61, 61, 0.51);
-			}
-			div.intro a.wale-btn {
-				text-align: center;
-				margin-top: 23px;
-			}
-			.others {
-				display: none;
-			}
-			.socials a {
-				margin-right: 14px;
-			}
-			.socials {
-				margin-top: 30px;
-			}
-			img {
-				max-width: 100%;
-			}
-			.works .row {
-				margin-top: 32px;
-			}
-			.work {
-				position: relative;
-			}
-			.work .hover {
-				content: '';
-				position: absolute;
-				background-color: white;
-				top: 0;
-				bottom: 0;
-				width: calc(100% - 30px);
-				text-align: center;
-				height: 100%;
-				opacity: 0.9;
-				display: none;
-			}
-			.work .hover > span {
-				display: table;
-				width: 100%;
-				height: 100%;
-			}
-			.work .hover > span > span {
-				display: table-cell;
-				vertical-align: middle;
-				font-weight: 800;
-			}
-			.black {
-				color: black;
-			}
-			.black:hover {
-				color: black;
-			}
-			.black:focus .work .hover > span > span,
-			.black:visited .work .hover > span > span {
-				text-decoration: line-through;
-				color: black;
-			}
-			.works {
-				margin-bottom: 30px;
-			}
-			.skills,
-			.works {
-				margin-top: 40px;
-			}
-			.works .wale-btn {
-				margin-bottom: 46px;
-			}
-			#ps {
-				margin-top: 30px;
-				font-style: italic;
-			}
-			.fix {
-				text-align: left;
-			}
-			.fix h1 {
-				font-weight: 700;
-			}
-			mark {
-				position: relative;
-				background-color: transparent;
-			}
-			mark:after {
-				content: '';
-				height: 8px;
-				background: rgba(255, 0, 0, 0.47);
-				position: absolute;
-				left: 0;
-				right: 0;
-				bottom: 4px;
-			}
-			header {
-				text-align: center;
-				padding-top: 3px;
-				position: relative;
-				z-index: 2
-			}
-			p:hover,
-			h1:hover,
-			h2:hover,
-			h3:hover,
-			h4:hover,
-			h5:hover,
-			h6:hover {
-				text-decoration: line-through;
-			}
-			.ilb {
-				display: inline-block;
-			}
-			.intro a {
-				color: initial;
-			}
-			.intro a:hover {
-				text-decoration: none;
-			}
-			.works {
-				margin-top: 100vh;
-				background-color: white;
-			}
-			.fix span:not(.exclude) {
-				color: gainsboro;
-				font-size: 12px;
-			}
-			.rows .col-sm-9 {
-				margin-bottom: 90px;
-			}
-			.typewrite-row h2 {
-				font-size: 77px;
-				font-weight: 700;
-			}
-			@media(max-width:768px) {
-				.typewrite-row h2 {
-						font-size: 30px;
-				}
-			}
-			img {
-				border: 1px solid gainsboro;
-			}
-			.tools {
-				background-color: transparent;
-				z-index: 4;
-				position: relative;
-			}
-			.things span[data-colors] {
-				width: 80px;
-				height: 80px;
-				border: 3px solid black;
-				display: inline-table;
-				transition: all 0.2s ease-out;
-				margin-bottom: 20px;
-				text-align: center;
-			}
-			.things span span {
-				display: table-cell;
-				vertical-align: middle;
-			}
-			.things {
-				margin-top: 78px;
-				margin-bottom: 30px;
-				text-align: center;
-			}
-			/**failsafe**/
-
-			body {
-				overflow-x: hidden;
-			}
-			footer {
-				padding: 30px;
-				z-index: 4;
-				position: relative;
-				text-align: center;
-			}
-			footer * {
-				color: black;
-				display: inline-block;
-			}
-			body > header {
-				position: fixed;
-				right: 0;
-				left: 0;
-				top: 0;
-			}
-			body > header p{
-				display: inline-block;
-			}
-			body > header p:first-child {
-				display: none;
-			}
-			/** mozilla specific**/
-			@-moz-document url-prefix() {
-				div.intro {
-					top: 50%;
-					transform: translate(-50%, -50%);
-					left: 50%;
-				}
-			}
-		</style>
 	</head>
 	<body lang="en">
 		<header>
@@ -304,7 +41,7 @@
 					<a href="https://themeforest.net/item/appeal-a-news-blog-shop-wordpress-theme/17355806"><mark data-polski="OTWARTY">OPEN</mark></a> <span>Themeforest.net</span>
 				</div>
 				<div class="col-sm-9">
-					<img alt="appeal" class="e" src="1.png" />
+					<img alt="appeal" class="e" src="images/1.png" />
 				</div>
 			</div>
 			<div class="rows clearfix">
@@ -314,7 +51,7 @@
 					<a href="http://superelite.co/pageant/demo"><mark data-polski="OTWARTY">OPEN</mark></a> <span>Superelite.co</span>
 				</div>
 				<div class="col-sm-9">
-					<img alt="pageant" class="e" src="6.png" />
+					<img alt="pageant" class="e" src="images/6.png" />
 				</div>
 			</div>
 			<div class="rows typewrite-row clearfix">
@@ -334,7 +71,7 @@
 					<a href="http://superelite.co/tfw/demo"><mark data-polski="OTWARTY">OPEN</mark></a> <span>Superelite.co</span>
 				</div>
 				<div class="col-sm-9">
-					<img alt="tfw" class="e" src="tfw.JPG" />
+					<img alt="tfw" class="e" src="images/tfw.JPG" />
 				</div>
 			</div>
 		</div>
@@ -383,94 +120,6 @@
 				</span>
 			</div>
 		</div>
-		<script>
-			$(document).ready(function() {
-				setTimeout(function() {
-						$(window).scrollTop(0);
-				}, 1000);
-			$('#lights').click(function(event) {
-				$('body').toggleClass('dark');
-			});
-			var colorJect;
-			var $this;
-			$('[data-colors]').mouseenter(function(event) {
-				colorJect = $(this).data('colors');
-				$this = $(this);
-				for (var i in colorJect) {
-						$this.css(i, colorJect[i]);
-				}
-			}).mouseleave(function(event) {
-				for (var i in colorJect) {
-						$this.css(i, 'initial'); //sorry IE :(
-				}
-			});
-			let introtype = new typeWrite(".intro .type", {
-				'texts': ['I am a junior Front-End Developer & a sophomore of the University of Lodz, currently working as a freelancer. I stand on a sweet spot where design & code intersects.'],
-				'loop': false,
-				'cursor': ' ',
-				'reverseDelay': 1000,
-				'speed': 20
-			}).start();
-			document.querySelector(".intro .type").addEventListener("typeDone", function() {
-				new typeWrite(".intro .type2", {
-						'texts': ['Do you want to grab a coffee or have a talk?'],
-						'loop': false,
-						'reverseDelay': 1000,
-						'cursor': ' ',
-						'speed': 20
-				}).start();
-			});
-			document.querySelector(".intro .type3").addEventListener("typeDone", function() {
-				$('body > header p:first-child').fadeIn().css('display', 'inline-block');
-			})
-			document.querySelector(".intro .type2").addEventListener("typeDone", function() {
-				new typeWrite(".intro .type3", {
-						'texts': ['I would love to hear from you'],
-						'loop': false,
-						'reverseDelay': 1000,
-						'speed': 50,
-						'cursor': ' :)'
-				}).start();
-			});
-			new typeWrite(".typewrite-row h2", {
-				'texts': ['Typewrite.js'],
-				'loop': false,
-				'reverseDelay': 1000,
-				'speed': 50,
-				'cursor': ' |'
-			}).start();
-			$('#polski-mode').click(function(event) {
-				if ($('body').attr('lang') == 'en') {
-						$('[data-polski]').each(function(index, el) {
-								$(this).attr('data-angielski', $(this).text());
-								$(this).text($(this).attr('data-polski'));
-						});
-						$('#polski-mode').text('Angielski');
-						$('body').attr('lang', 'pl');
-				} else {
-						$('[data-angielski]').each(function(index, el) {
-								$(this).text($(this).attr('data-angielski'));
-						});
-						$('body').attr('lang', 'en');
-						$('#polski-mode').text('Polski');
-				}
-			});
-			var opacify = function(){
-				var header = $('body');
-				var range = 200;
-				var target = $('.intro');
-				var targetHeight = target.outerHeight();
-				var scrollPercent = (targetHeight - window.scrollY) / targetHeight;
-				if (scrollPercent >= 0) {
-						target.css('opacity', scrollPercent);
-				}
-				$(".fix").stick_in_parent();
-		}
-			$(document)
-			.scroll(opacify);
-			console.log('thanks for checking the source');
-		})
-		</script>
 		<footer>
 			<a target="_blank" href="https://pl.linkedin.com/in/malik-morenigbade-41242311a">
 				<p>Linkedin</p>
