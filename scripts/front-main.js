@@ -5,8 +5,7 @@ requirejs.config({
 	 'stickit': 'stickit'
     },
      shim:{
-        deps:["jquery"], // jquery.highlight dependeps on jquery so it will load after jquery has been loaded 
-        exports:"stickit"
+        "stickit"  : ["jquery"]
    }
 });
 
