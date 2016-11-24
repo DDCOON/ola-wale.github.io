@@ -2,18 +2,14 @@
 requirejs.config({
     paths: {
         'jquery': 'jquery.min',
-	 'stickit': 'stickit'
-    },
-     shim:{
-        "stickit"  : ["jquery"]
-   }
+    }
 });
 
-define('jquery-private', ['jquery'], function (jq) {
+define('jquery-private', ['jquery','stickit'], function (jq) {
     return jq.noConflict( true );
 });
 
-require(['jquery-private','typewrite.min','stickit'],function($){
+require(['jquery-private','typewrite.min'],function($){
 	document.title = 'Malik Moren';
 			$(document).ready(function() {
 				setTimeout(function() {
