@@ -2,6 +2,7 @@
 requirejs.config({
     paths: {
         'jquery': 'jquery.min',
+	 'stickit': 'stickit'
     }
 });
 
