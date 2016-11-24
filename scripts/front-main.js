@@ -3,7 +3,11 @@ requirejs.config({
     paths: {
         'jquery': 'jquery.min',
 	 'stickit': 'stickit'
-    }
+    },
+     shim:{
+        deps:["jquery"], // jquery.highlight dependeps on jquery so it will load after jquery has been loaded 
+        exports:"stickit"
+   }
 });
 
 define('jquery-private', ['jquery'], function (jq) {
