@@ -109,6 +109,9 @@
 			.hljs {
 				overflow: hidden !important
 			}
+			.rel-input a.button{
+				display:block;
+			}
 		</style>
 		<title>typewrite.js</title>
 	</head>
@@ -192,7 +195,9 @@ let x = new typeWrite(".someselector",{ <br />
 					<small>Enter Maximum delay duration</small>
 					<input class="waitOnCharDuration" value="900" placeholder="Enter Maximum delay duration" />
 				</div>
-				<a class="button randWaitOnChar oss">randWaitOnChar:false</a>
+				<div class="rel-input oss">
+					<a class="button randWaitOnChar oss">randWaitOnChar:false</a>
+				</div>
 			</section>
 		</div>
 		<div class="use">
