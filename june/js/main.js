@@ -87,6 +87,8 @@ app.config(function($routeProvider, $locationProvider) {
 			controller: 'mainViewController'
     });
 });
+//HashError
+document.location.hash =  '/';
 
 app.run(function($rootScope) {
 	$rootScope.$on('$routeChangeSuccess', function(ev, data) {
