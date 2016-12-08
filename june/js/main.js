@@ -38,10 +38,6 @@ var app = angular.module("june", ["ngRoute", 'ngAnimate']);
 app.config(function($routeProvider, $locationProvider) {
 	$routeProvider
 		.when("/", {
-			Name: 'About',
-			templateUrl: "templates/about.html"
-		})
-		.when("/main", {
 			Name: 'Main',
 			templateUrl: "templates/main.html",
 			controller: 'mainViewController'
@@ -80,6 +76,11 @@ app.config(function($routeProvider, $locationProvider) {
 			templateUrl: "templates/contact.html",
 			controller: 'contactController'
 		})
+		.otherwise({
+			Name: 'Main',
+			templateUrl: "templates/main.html",
+			controller: 'mainViewController'
+    });
 });
 
 app.run(function($rootScope) {
