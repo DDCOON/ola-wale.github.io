@@ -192,6 +192,7 @@ h6:hover {
 }
 .rows .col-sm-9 {
 	margin-bottom: 90px;
+	text-align:right;
 }
 .typewrite-row h2 {
 	font-size: 77px;
