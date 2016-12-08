@@ -42,6 +42,11 @@ app.config(function($routeProvider, $locationProvider) {
 			templateUrl: "templates/main.html",
 			controller: 'mainViewController'
 		})
+		.when("/main", {
+			Name: 'Main',
+			templateUrl: "templates/main.html",
+			controller: 'mainViewController'
+		})
 		.when("/skills", {
 			Name: 'Skills',
 			templateUrl: "templates/skills.html",
