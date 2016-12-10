@@ -14,7 +14,7 @@ app.controller('portfolioController', function($scope, $rootScope) {
 			},
 			subText: 'On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire',
 			buttonText: 'PREVIEW PROJECT',
-			buttonLink: '',
+			buttonLink: '#pricing',
 			tags:'product design'
 		},
 		1: {
@@ -31,7 +31,7 @@ app.controller('portfolioController', function($scope, $rootScope) {
 			},
 			subText: 'The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.',
 			buttonText: 'BUY PRODUCT',
-			buttonLink: '',
+			buttonLink: '#pricing',
 			tags:'product design'
 		},
 		2: {
@@ -48,7 +48,7 @@ app.controller('portfolioController', function($scope, $rootScope) {
 			},
 			subText: 'The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.',
 			buttonText: 'BUY SAMPLES',
-			buttonLink: '',
+			buttonLink: '#pricing',
 			tags:'product design'
 		},
 		3: {
@@ -65,7 +65,7 @@ app.controller('portfolioController', function($scope, $rootScope) {
 			},
 			subText: 'The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.',
 			buttonText: 'TRY ON',
-			buttonLink: '',
+			buttonLink: '#pricing',
 			tags:'clothing'
 		},
 		4: {
@@ -82,7 +82,7 @@ app.controller('portfolioController', function($scope, $rootScope) {
 			},
 			subText: 'The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.',
 			buttonText: 'PURCHASE',
-			buttonLink: '',
+			buttonLink: '#pricing',
 			tags:'design product'
 		},
 	}
