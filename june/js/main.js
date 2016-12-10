@@ -93,9 +93,6 @@ document.location.hash =  '/';
 
 app.run(function($rootScope) {
 	$rootScope.$on('$routeChangeSuccess', function(ev, data) {
-		if(typeof data.controller === 'undefined'){
-			return;
-		}
 		$('body').css('overflow-y', 'auto');
 		//fadeout the modal on routeChangeSuccess
 		$('#modal').fadeOut();
