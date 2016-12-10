@@ -1,3 +1,4 @@
+//calculate text height for canvas use.
 var getTextHeight = function(font) {
 
 	var text = $('<span>Hg</span>').css({
@@ -92,6 +93,9 @@ document.location.hash =  '/';
 
 app.run(function($rootScope) {
 	$rootScope.$on('$routeChangeSuccess', function(ev, data) {
+		if(typeof data.controller === 'undefined'){
+			return;
+		}
 		$('body').css('overflow-y', 'auto');
 		//fadeout the modal on routeChangeSuccess
 		$('#modal').fadeOut();
