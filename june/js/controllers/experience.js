@@ -98,7 +98,6 @@ app.controller('experienceController', function($scope,$rootScope) {
 		}
 		$('html').css('cursor', 'pointer');
 		var index = activeBars[0]._index;
-		console.log(activeBars[0])
 		var __chart = chartInstance;
 		var ctx = document.getElementById('anotateCanvas').getContext('2d');
 		if (typeof index != 'undefined') {
