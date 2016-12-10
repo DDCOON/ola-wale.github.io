@@ -10,7 +10,7 @@ app.controller('pricingController', function($scope, $rootScope) {
 			currency: '$',
 			image: 'http://image.flaticon.com/icons/svg/171/171240.svg',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.',
-			link: '#'
+			link: ''
 		},
 		1: {
 			name: 'Professional',
@@ -18,7 +18,7 @@ app.controller('pricingController', function($scope, $rootScope) {
 			currency: '$',
 			image: 'http://image.flaticon.com/icons/svg/171/171240.svg',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.',
-			link: '#'
+			link: ''
 		},
 		2: {
 			name: 'Enterprise',
@@ -26,7 +26,7 @@ app.controller('pricingController', function($scope, $rootScope) {
 			currency: '$',
 			image: 'http://image.flaticon.com/icons/svg/171/171240.svg',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.',
-			link: '#'
+			link: ''
 		}
 	};
 	$scope.callOwl = function() {
