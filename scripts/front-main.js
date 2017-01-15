@@ -13,7 +13,6 @@ define('jquery-private', ['jquery','stickit'], function (jq) {
 });
 
 require(['jquery-private','typewrite.min'],function($){
-	document.title = 'Malik Moren';
 			$(document).ready(function() {
 				setTimeout(function() {
 						$(window).scrollTop(0);
