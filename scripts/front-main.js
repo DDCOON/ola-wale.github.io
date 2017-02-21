@@ -13,7 +13,6 @@ define('jquery-private', ['jquery','stickit'], function (jq) {
 });
 
 require(['jquery-private','typewrite.min'],function($){
-	document.title = 'Malik Moren';
 			$(document).ready(function() {
 				setTimeout(function() {
 						$(window).scrollTop(0);
@@ -35,7 +34,7 @@ require(['jquery-private','typewrite.min'],function($){
 				}
 			});
 			let introtype = new typeWrite(".intro .type", {
-				'texts': ['I am a junior Front-End Developer & a sophomore of the University of Lodz, currently working as a freelancer. I stand on a sweet spot where design & code intersects.'],
+				'texts': ['I\'m a Front-End Developer & a sophomore of the University of Lodz, currently working as a freelancer. I stand on a sweet spot where design & code intersects.'],
 				'loop': false,
 				'cursor': ' ',
 				'reverseDelay': 1000,
