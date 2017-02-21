@@ -143,126 +143,12 @@
 		<h3 class="typewrite">Custom Vectors C++ Implementation</h3>
 		<small>Task: "Implement your own version of C++ vector - the SCA. This could be implemented just for integers. Your implementation should include functions for read and write access of elements, appending, resizing (truncating if downsizing), deletion of one are a segment of elements. Test its accumulated running times for a large sequence of operations. Compare it with the same test for C++ vector."</small>
 	</header>
-<<<<<<< HEAD
 	<div class="use links">
 		<h3>Files</h3>
 		<a href="malik_vector.h" class="download">malik_vector.h</a>
 		<a href="malik_vector.cpp" class="download">malik_vector.cpp</a>
 	</div>
-=======
-	<pre>
-		<code class="cpp">
-#include &lt;iostream&gt;
-#include &lt;cstring&gt;
-using namespace std;
-struct vec {
-	double * arr;
-	int capacity;
-	int n;
-	void increase(int new_size) {
-		double* newArr = new double[new_size];
-		std::copy(arr, arr + std::min(n, new_size), newArr);
-		delete[] arr;
-		arr = newArr;
-	}
-	public:
-		// create an empty vector
-		vec(): capacity(10), n(0) {
-			arr = new double[capacity];
-		}
-		void push_back(double x) {
-			if (n <= capacity) {
-				increase(2 * capacity);
-				arr[n] = x;
-				++n;
-			}
-		}
-		void set(int i, double val) {
-			if (i < 0 || i >= n) {
-				cout << "range error";
-				return;
-			}
-			arr[i] = val;
-		}
-		double get(int i) const {
-			if (i < 0 || i >= n) {
-				cout << "range error";
-				return 0;
-			}
-			return arr[i];
-		}
 
-		void printAll() {
-			int index = 0;
-			//if the array size is less than or equals zero, bail!.
-			if (n <= 0) {
-				return;
-			}
-			cout << "\n[";
-			while (index < n) {
-				cout << arr[index];
-				index++;
-				if (index == n) {
-					cout << "]";
-				} else {
-					cout << ",";
-				}
-			}
-		}
-
-		void _erase(int index) {
-			if (index < 0 || index >= n) {
-				cout << "range error";
-				return;
-			}
-			double * newArray = new double[n];
-			int newArrayIndex = 0;
-			for (int i = 0; i < n; i++) {
-				if (i != index) {
-					newArray[newArrayIndex] = arr[i];
-					newArrayIndex++;
-				}
-			}
-			delete[] arr;
-			arr = newArray;
-			n--;
-		}
-
-	~vec() {
-		delete[] arr;
-	}
-
-
-};
-
-int main() {
-	vec vec;
-	vec.push_back(1);
-	vec.push_back(2);
-	vec.push_back(3);
-	cout << "\nPrint all elements";
-	vec.printAll();
-	cout << "\nerase the second element (2)";
-	vec._erase(1);
-	cout << "\nPrint all to confirm";
-	vec.printAll();
-	cout << "\nadd 39 to the vector";
-	vec.push_back(39);
-	cout << "\nadd 40 to the vector";
-	vec.push_back(40);
-	cout << "\nPrint all to confirm";
-	vec.printAll();
-	cout << "\nerase the 3rd element.";
-	vec._erase(2);
-	vec.printAll();
-	cout << "\nset the 3rd element as 8";
-	vec.set(2, 8);
-	vec.printAll();
-	
-}
-		</code>
-	</pre>
->>>>>>> bba110f9e159bc362b908c424b86fdf8ce9ee5ab
 	<div class="use">
 		<section>
 			<h3>Efficiency</h3>
