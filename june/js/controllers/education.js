@@ -21,18 +21,18 @@ app.controller('educationController', function($scope,$rootScope) {
 			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,\nsed do eiusmod tempor incididunt ut\nlabore et dolore magna aliqua. Ut enim ad minim veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip'
 		},
 		1: {
-			title: 'Msc. Web Development',
-			subTitle: 'University of Leicester',
+			title: 'Msc. Tea Drinking',
+			subTitle: 'University of Lipton',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,\nsed do eiusmod tempor incididunt ut\nlabore et dolore magna aliqua. Ut enim ad minim veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip'
 		},
 		2: {
-			title: 'Ba. Game Development',
-			subTitle: 'University of Birmingham',
+			title: 'Ba. Sleeping',
+			subTitle: 'Nocturnal University of Universities',
 			description: 'Lorem ipsum dolor sit amet,\nsed do eiusmod tempor incididunt ut\nlabore et dolore magna aliqua. Ut enim ad minim veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip'
 		},
 		3: {
-			title: 'Phd. Quantum Computing',
-			subTitle: 'Brown University',
+			title: 'Phd. Pizza Eating',
+			subTitle: 'Pizza Hut University',
 			description: 'Lorem ipsum dolor sit amet,\nsed do eiusmod tempor incididunt ut\nlabore et dolore magna aliqua. Ut enim ad minim veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip'
 		}
 	}
