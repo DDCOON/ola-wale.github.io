@@ -264,3 +264,20 @@ body > header p:first-child {
 		left: 50%;
 	}
 }
+
+span#des{
+content: "";
+    position: fixed;
+    z-index: 0;
+    width: 100%;
+    height: 180%;
+    top: 0;
+	opacity:1;
+    transform: skewY(-12deg);
+    background: #f6f9fc;
+	transition:all 0.2s ease-out;
+}
+
+body.dark #des{
+    opacity: 0.1;
+}
