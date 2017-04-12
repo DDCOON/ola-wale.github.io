@@ -38,7 +38,8 @@ div.intro {
 		margin: auto;
 	color:white;
 }
-div.intro h1{
+div.intro h1,
+.fix h1{
 	    text-shadow: -1px 3px 0px rgba(0, 0, 0, 0.19);
 }
 div.intro > div {
