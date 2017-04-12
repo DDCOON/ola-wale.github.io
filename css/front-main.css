@@ -36,12 +36,17 @@ div.intro {
 	left: 0;
 		right: 0;
 		margin: auto;
+	color:white;
+}
+div.intro h1{
+	    text-shadow: -1px 3px 0px rgba(0, 0, 0, 0.19);
 }
 div.intro > div {
 	display: table-cell;
 	vertical-align: middle;
 }
 div.intro p {
+	color:white;
 	font-size: 1em;
 	line-height: 1.45;
 	color: #000000;
