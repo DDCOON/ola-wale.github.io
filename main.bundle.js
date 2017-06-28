@@ -26,7 +26,7 @@ var MainComponent = (function () {
                 name: 'Poke(test?)', subtitle: 'Index of Pokemons cross-referenced with their stats and item\'s held using PokeApi.co', link: 'http://dev.owale.co/poketest/', images: ['/assets/images/pk1.jpg', '/assets/images/pk2.jpg', '/assets/images/pk3.jpg']
             },
             {
-                name: 'appeal', subtitle: 'WordPress Blog Theme', link: 'https://themeforest.net/item/appeal-a-news-blog-shop-wordpress-theme/17355806', images: ['https://ola-wale.github.io/images/1.png']
+                name: 'appeal', subtitle: 'WordPress Blog Theme', link: 'https://themeforest.net/item/appeal-a-news-blog-shop-wordpress-theme/17355806', images: ['/assets/images/1.png']
             },
             {
                 name: 'June', subtitle: 'Personal AngularJs Template', link: 'http://owale.co/June', images: ['/assets/images/june.jpg']
