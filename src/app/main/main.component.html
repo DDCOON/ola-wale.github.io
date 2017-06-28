@@ -1,0 +1,72 @@
+<header>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2">
+				<img id="avatar" src="https://instagram.flhr5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/19436346_109454779681484_5362652150960750592_n.jpg" />
+			</div>
+			<div class="col-sm-10">
+				<h1>Wale Morenigbade</h1>
+				<div class="bio">
+					<h5><b>Born:  </b> Feb 14, 1998  ({{age}})</h5>
+					<h5><b>Nationality:  </b> Nigerian</h5>
+					<p>
+						I'm a Full-Stack Developer & a senior at the University of Lodz. I stand on a sweet spot where design & code intersects.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div id="main">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8">
+				<div class="stuff card">
+					<h5>stuff</h5>
+				</div>
+				<div class="works">
+					<div *ngFor="let item of stuff" class="card">
+						<a target="_blank" href="{{item.link}}"><h5>{{item.name}}</h5> <i class="ti-new-window"></i></a>
+						<small class="show">
+						{{item.subtitle}}
+					</small>
+						<div class="gall">
+							<owl-carousel *ngIf="item.images.length > 1" [options]="{items: 3, dots: true, nav: true,navText: ['<i class=ti-angle-left></i>','<i class=ti-angle-right></i>']}" [carouselClasses]="['owl-theme', 'sliding']">
+								<div class="item" *ngFor="let image of item.images">
+									<a target="_blank" href="{{image}}"><img alt="{{item.name}}" src="{{image}}" /></a>
+								</div>
+							</owl-carousel>
+							<div *ngIf="item.images.length == 1" class="img">
+								<img alt="{{item.name}}" src="{{item.images[0]}}" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="contact" class="col-sm-4">
+				<div class="card">
+					<h5>Contact & Personal info</h5>
+					<div class="ctnt">
+						<ul>
+							<li>
+								<i class="ti-download"></i>
+								<div>
+									<b>Email</b> <br />
+									<a href="mailto:obfuscated@owale.co">obfuscated@owale.co</a>
+								</div>
+							</li>
+							<li>
+								<i class="ti-link"></i>
+								<div>
+									<b>Web page:</b> <br />
+									<a>You're already here</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
