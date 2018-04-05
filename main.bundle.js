@@ -20,6 +20,9 @@ var MainComponent = (function () {
     function MainComponent() {
         this.stuff = [
 	    {
+                name: 'Crypto Exchange Dummy Dashboard', subtitle: 'A Crypto-Currency Exchange and Dashboard made in Angular 5', link: 'http://dev.owale.co/BitBasin/exchange', images: ['https://s3.eu-west-2.amazonaws.com/bitbasin-assets/site-assets/images/Screen+Shot+2018-04-05+at+10.45.01+AM.png']
+            },
+	    {
                 name: 'Crypto Portfolio', subtitle: 'A simple ionic 3 crypto portfolio app I made for my Mobile Applications Class', link: 'https://github.com/ola-wale/Mobile-Applications-Project--Portfolio-App', images: ['https://github.com/ola-wale/Mobile-Applications-Project--Portfolio-App/raw/master/images/IMG_1299.PNG']
             },
 	    {
