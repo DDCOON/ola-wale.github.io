@@ -26,7 +26,7 @@ var MainComponent = (function () {
                 name: 'Crypto Portfolio', subtitle: 'A simple ionic 3 crypto portfolio app I made for my Mobile Applications Class', link: 'https://github.com/ola-wale/Mobile-Applications-Project--Portfolio-App', images: ['https://github.com/ola-wale/Mobile-Applications-Project--Portfolio-App/raw/master/images/IMG_1299.PNG']
             },
 	    {
-                name: 'FirePaste', subtitle: 'A Self hosted Android(copy)->MacOS(paste) solution. Observes Firebase\'s Realtime Database, updates MacOS\'s clipboard with value changes.', link: 'https://github.com/ola-wale/FirePaste-MacOS', images: ['https://camo.githubusercontent.com/69e106873089f34fb6839d91015927703b4d1053/68747470733a2f2f7331372e706f7374696d672e6f72672f39327872346a63666a2f53637265656e5f53686f745f323031372d31312d32325f61745f312e31382e32385f504d2e706e67']
+                name: 'FirePaste', subtitle: 'A Self hosted Android(copy)->MacOS(paste) solution. Observes Firebase\'s Realtime Database, updates MacOS\'s clipboard with value changes.', link: 'https://github.com/ola-wale/FirePaste-MacOS', images: ['https://camo.githubusercontent.com/a09c8d76b7ae855bceed8a0669e249f55b9cf4bf/68747470733a2f2f7331372e706f7374696d672e63632f39327872346a63666a2f53637265656e5f53686f745f323031372d31312d32325f61745f312e31382e32385f504d2e706e67']
             },
 	    {
                 name: 'Poke(test?)', subtitle: 'Index of Pokemons cross-referenced with their stats and item\'s held using PokeApi.co', link: 'http://dev.owale.co/poketest/', images: ['/assets/images/pk1.jpg', '/assets/images/pk2.jpg', '/assets/images/pk3.jpg']
