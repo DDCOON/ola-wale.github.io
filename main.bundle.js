@@ -23,7 +23,7 @@ var MainComponent = (function () {
                 name: 'TXTag', subtitle: 'A small application for tagging Bitcoin Transactions', link: 'https://github.com/ola-wale/TxTag', images: ['https://raw.githubusercontent.com/ola-wale/TxTag/master/gitassets/demo.png']
             },
 	    {
-                name: 'TXTag Rest API', subtitle: 'TxTag\'s REST API based on Expressjs & MongoDB', link: 'https://github.com/ola-wale/TxTag-Api'
+                name: 'TXTag\'s Rest API', subtitle: 'TxTag\'s REST API based on Expressjs & MongoDB', link: 'https://github.com/ola-wale/TxTag-Api', images: []
             },
 	    {
                 name: 'Crypto Exchange Front-end', subtitle: 'A Crypto-Currency Exchange Front-end made in Angular 5', link: 'http://dev.owale.co/BitBasin/exchange', images: ['https://s3.eu-west-2.amazonaws.com/bitbasin-assets/site-assets/images/Screen+Shot+2018-04-05+at+10.45.01+AM.png']
